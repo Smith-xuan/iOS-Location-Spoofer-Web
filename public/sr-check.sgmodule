@@ -1,0 +1,8 @@
+#!name=Shadowrocket Script Check
+#!desc=Temporary test: open /sr-check.txt in Safari, then disable this module.
+
+[Script]
+SR Check = type=http-response,pattern=^https:\/\/ios-location-spoofer-web-efg\.pages\.dev\/sr-check\.txt(?:\?.*)?$,requires-body=1,script-path=https://ios-location-spoofer-web-efg.pages.dev/sr-check.js,timeout=10
+
+[MITM]
+hostname = %APPEND% ios-location-spoofer-web-efg.pages.dev
